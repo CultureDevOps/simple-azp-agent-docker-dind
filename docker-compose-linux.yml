@@ -1,0 +1,16 @@
+version: "3.8"
+
+services:
+  dind:
+    build:
+      context: ./
+      dockerfile: azp-agent-docker-dind.dockerfile
+    tty: true
+    restart: unless-stopped
+    volumes:
+      - "/var/run/docker.sock:/var/run/docker.sock"
+    environment:
+      AZP_URL: "https://dev.azure.com/youraccount"
+      AZP_AGENT_NAME: "azure-agent-desktop"
+      AZP_POOL: "azure-agent"
+      AZP_TOKEN: "Your Token Here"
