@@ -31,5 +31,5 @@ jobs:
           context: .
           file: azp-agent-docker-dind.dockerfile
           push: true
-          tags: simple-azp-agent-docker-dind:latest
+          tags: culturedevops/simple-azp-agent-docker-dind:latest
           
