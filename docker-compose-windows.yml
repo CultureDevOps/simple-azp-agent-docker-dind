@@ -2,9 +2,10 @@ version: "3.8"
 
 services:
   dind:
-    build:
-      context: ./
-      dockerfile: azp-agent-docker-dind.dockerfile
+    image: culturedevops/simple-azp-agent-docker-dind:latest
+    # build:
+    #   context: ./
+    #   dockerfile: azp-agent-docker-dind.dockerfile
     tty: true
     restart: unless-stopped
     volumes:
